@@ -1,0 +1,27 @@
+<student>
+    <name>Jason James</name>
+    <id>123456</id>
+    <gpa>9.2</gpa>
+    <grade>B</grade>
+    <gender>m</gender>
+</student>
+<student>
+    <name>Tammy James</name>
+    <gpa>11.2</gpa>
+    <grade>A</grade>
+    <id>123457</id>
+    <gender>f</gender>
+</student>
+<student>
+    <name>Henry Ramirez</name>
+    <gpa>12.3</gpa>
+    <id>111888</id>
+    <major>ChE</major>
+    <class>soph</class>
+    <gender>m</gender>
+</student>
+<student>
+    <id>788531</id>
+    <name>Suzie Shah</name>
+    <grade>Q</grade>
+</student>
