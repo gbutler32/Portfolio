@@ -1,0 +1,134 @@
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R         
+0 
+ 11.53.54 JOB07666 ---- SUNDAY,    17 SEP 2017 ----
+ 11.53.54 JOB07666  IRR010I  USERID KC03I2E  IS ASSIGNED TO THIS JOB.
+ 11.53.54 JOB07666  ICH70001I KC03I2E  LAST ACCESS AT 11:51:56 ON SUNDAY, SEPTEMBER 17, 2017
+ 11.53.54 JOB07666  $HASP373 KC03I2EG STARTED - INIT 1    - CLASS A        - SYS S0W1
+ 11.53.54 JOB07666  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 11.53.54 JOB07666  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 11.53.54 JOB07666  -KC03I2EG                      00     45 ******    .00     .0    107   0      0      0      0     0
+ 11.53.54 JOB07666  -KC03I2EG ENDED.  NAME-GARY BUTLER          TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 11.53.54 JOB07666  $HASP395 KC03I2EG ENDED
+0------ JES2 JOB STATISTICS ------
+-  17 SEP 2017 JOB EXECUTION DATE
+-           82 CARDS READ
+-          134 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           13 SYSOUT SPOOL KBYTES
+-         0.00 MINUTES EXECUTION TIME
+         1 //KC03I2EG JOB ,'GARY BUTLER',MSGCLASS=H                                JOB07666
+         2 //STEP1 EXEC PGM=ASSIST                                                 00020000
+         3 //STEPLIB DD DSN=KC02293.ASSIST.LOADLIB,DISP=SHR                        00030000
+         4 //SYSPRINT DD SYSOUT=*                                                  00040000
+         5 //SYSIN DD *                                                            00050000
+         6 //FT05F001   DD  *                                                      00260016
+         7 //FT06F001   DD SYSOUT=*                                                00390026
+ ICH70001I KC03I2E  LAST ACCESS AT 11:51:56 ON SUNDAY, SEPTEMBER 17, 2017
+ IEF236I ALLOC. FOR KC03I2EG STEP1
+ IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I JES2 ALLOCATED TO SYSIN
+ IEF237I JES2 ALLOCATED TO FT05F001
+ IEF237I JES2 ALLOCATED TO FT06F001
+ IEF142I KC03I2EG STEP1 - STEP WAS EXECUTED - COND CODE 0000
+ IGD104I KC02293.ASSIST.LOADLIB                       RETAINED,  DDNAME=STEPLIB 
+ IEF285I   KC03I2E.KC03I2EG.JOB07666.D0000103.?         SYSOUT        
+ IEF285I   KC03I2E.KC03I2EG.JOB07666.D0000101.?         SYSIN         
+ IEF285I   KC03I2E.KC03I2EG.JOB07666.D0000102.?         SYSIN         
+ IEF285I   KC03I2E.KC03I2EG.JOB07666.D0000104.?         SYSOUT        
+ IEF373I STEP/STEP1   /START 2017260.1153
+ IEF032I STEP/STEP1   /STOP  2017260.1153 
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:   584K  SYS:   268K  EXT:        0K  SYS:    11504K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF375I  JOB/KC03I2EG/START 2017260.1153
+ IEF033I  JOB/KC03I2EG/STOP  2017260.1153 
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+1*** ASSIST 4.0/A2-05/15/82  470/V7A/0:OS/VS2  INS=SDFP7/X=BGHO, CHECK/TRC/=1180, OPTS=CDKMPR FROM PENN ST*NIU COMPSCI*LT         
+0                                                                                                                                 
+0                                                                                                               PAGE    1         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+                                       1 ********************************************                            00060000         
+                                       2 * PROGRAM 2                                                             00070016         
+                                       3 *                                                                       00080000         
+                                       4 * NAME: GARY BUTLER                                                     00090000         
+                                       5 *                                                                       00100000         
+                                       6 * Register Usage                                                        00110000         
+                                       7 *                                                                       00120000         
+                                       8 *  2     NUM1                                                           00130032         
+                                       9 *  3     NUM2                                                           00140032         
+                                      10 *  4     NUM3                                                           00141032         
+                                      11 *  5     NUMBER OF LINES                                                00142021         
+                                      12 *  6     SUM                                                            00143021         
+                                      13 * 15     Base register                                                  00150000         
+                                      14 *                                                                       00160000         
+                                      15 ********************************************                            00170000         
+ 000000                               16 MAIN     CSECT                                                          00180000         
+ 000000                               17          USING MAIN,15                                                  00190000         
+ 000000 1B55                          18          SR    5,5             ZERO FOR LINE NUMBER                     00191031         
+ 000002 1B66                          19          SR    6,6             ZERO FOR SUM                             00192021         
+ 000004 1B22                          20 TOP      SR    2,2             ZERO FOR NUM1                            00200032         
+ 000006 1B33                          21          SR    3,3             ZERO FOR NUM2                            00210032         
+ 000008 1B44                          22          SR    4,4             ZERO FOR NUM3                            00211032         
+ 00000A E000 F054 0050 00054          23          XREAD BUFFER,80                                                00214027         
+ 000010 4740 F044            00044    24          BC    B'0100',BREAK                                            00214146         
+ 000014 5A50 F138            00138    25          A     5,=F'1'         LINE NUMBER +1                           00214224         
+ 000018 5320 F054            00054    26          XDECI 2,BUFFER        INPUT NUM1                               00214332         
+ 00001C 5220 F0B8            000B8    27          XDECO 2,N1            OUTPUT NUM1                              00214435         
+ 000020 5330 1000            00000    28          XDECI 3,0(0,1)        INPUT NUM2                               00214645         
+ 000024 5230 F0C7            000C7    29          XDECO 3,N2                                                     00214735         
+ 000028 5340 1000            00000    30          XDECI 4,0(0,1)        INPUT NUM3                               00214945         
+ 00002C 5240 F0D6            000D6    31          XDECO 4,N3            OUTPUT NUM3                              00217035         
+ 000030 1A34                          32          AR    3,4             Y + Z                                    00220032         
+ 000032 1B32                          33          SR    3,2             X + Z - X                                00221032         
+ 000034 1A63                          34          AR    6,3             SUM+X+Y-Z                                00221132         
+ 000036 5260 F0EA            000EA    35          XDECO 6,TOT           OUTPUT SUM                               00221232         
+ 00003A E020 F0B4 0042 000B4          36          XPRNT LINE,66                                                  00222044         
+ 000040 47F0 F004            00004    37          BC    B'1111',TOP                                              00222146         
+ 000044 5250 F108            00108    38 BREAK    XDECO 5,NLINE         OUTPUT LINE COUNT                        00222432         
+ 000048 5260 F127            00127    39          XDECO 6,REST          OUTPUT SUM                               00222532         
+ 00004C E020 F0F6 003D 000F6          40          XPRNT LINE2,61                                                 00222641         
+ 000052 07FE                          41          BR    14                                                       00222704         
+ 000054                               42 BUFFER   DS    80C                                                      00227016         
+ 0000A4                               43 NUM1     DS    F                                                        00227131         
+ 0000A8                               44 NUM2     DS    F                                                        00227231         
+ 0000AC                               45 NUM3     DS    F                                                        00227331         
+ 0000B0                               46 LOC      DS    F                                                        00227436         
+ 0000B4 F0                            47 LINE     DC    C'0'                                                     00228016         
+ 0000B5 40E77E                        48          DC    CL3' X='                                                 00229020         
+ 0000B8                               49 N1       DS    12C                                                      00230039         
+ 0000C4 40E87E                        50          DC    CL3' Y='                                                 00232020         
+ 0000C7                               51 N2       DS    12C                                                      00233039         
+ 0000D3 40E97E                        52          DC    CL3' Z='                                                 00235020         
+1                                                                                                               PAGE    2         
+0  LOC  OBJECT CODE    ADDR1 ADDR2  STMT   SOURCE STATEMENT                                                                       
+ 0000D6                               53 N3       DS    12C                                                      00236039         
+ 0000E2 404040                        54          DC    CL3' '                                                   00236132         
+ 0000E5 E2E4D47A40                    55          DC    CL5'SUM: '                                               00236240         
+ 0000EA                               56 TOT      DS    12C                                                      00236343         
+ 0000F6 F0                            57 LINE2    DC    C'0'                                                     00237016         
+ 0000F7 D5A4948285994096              58          DC    CL17'Number of lines :'                                  00238023         
+ 000108                               59 NLINE    DS    12C                                                      00238140         
+ 000114 404040E2A4944096              60          DC    CL19'   Sum of results :'                                00239041         
+ 000127                               61 REST     DS    12C                                                      00239140         
+                                      62          END   MAIN                                                     00240002         
+ 000138 00000001                      63                =F'1'                                                                     
+0***  NO   STATEMENTS FLAGGED -  NO   WARNINGS,  NO   ERRORS                                                                      
+0*** DYNAMIC CORE AREA USED:  LOW:    2724 HIGH:     596 LEAVING:  490248 FREE BYTES. AVERAGE:       51 BYTES/STMT ***            
+0*** ASSEMBLY TIME =    0.000 SECS,    64000 STATEMENTS/SEC ***                                                                   
+0*** PROGRAM EXECUTION BEGINNING - ANY OUTPUT BEFORE EXECUTION TIME MESSAGE IS PRODUCED BY USER PROGRAM ***                       
+0 X=        8163 Y=        2529 Z=        2805   SUM:        -2829                                                                
+0 X=        4536 Y=        1839 Z=        5741   SUM:          215                                                                
+0 X=         591 Y=        7843 Z=        9487   SUM:        16954                                                                
+0 X=        4190 Y=        3057 Z=        2775   SUM:        18596                                                                
+0 X=        2399 Y=         667 Z=        4129   SUM:        20993                                                                
+0 X=        8118 Y=        3961 Z=        6535   SUM:        23371                                                                
+0 X=        4765 Y=         498 Z=        1111   SUM:        20215                                                                
+0 X=        9056 Y=        2345 Z=        1110   SUM:        14614                                                                
+0 X=           1 Y=           2 Z=           3   SUM:        14618                                                                
+0 X=        9999 Y=        9998 Z=        9997   SUM:        24614                                                                
+0 X=        8001 Y=        7999 Z=        3512   SUM:        28124                                                                
+0Number of lines :          11   Sum of results :       28124                                                                     
+0*** EXECUTION TIME =    0.000 SECS.       209 INSTRUCTIONS EXECUTED -   209000 INSTRUCTIONS/SEC ***                              
+0*** AM004 - NORMAL USER TERMINATION BY RETURN ***                                                                                
