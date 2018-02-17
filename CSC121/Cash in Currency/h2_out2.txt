@@ -1,0 +1,24 @@
+=============================================================
+Harper CSC121-003: Assignment #2, 2014 Fall
+Student: Gary Butler
+
+This program will cash the amount of money into bills of 100,
+20, 10, 5 and 1 dollars and coins of quaters, dimes, nickles
+and cents.
+=============================================================
+
+How much money do you want to cash? ==> 234.567
+You have asked to cash 234 dollars and 56 cents.
+
+Please count, you have
+2 one hundred bills,
+1 twenty bills,
+1 ten bills,
+4 dollars.
+
+Plus you have
+2 quaters,
+1 nickles,
+1 cents.
+
+Press any key to continue . . .

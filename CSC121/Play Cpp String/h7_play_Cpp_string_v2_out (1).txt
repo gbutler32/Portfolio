@@ -1,0 +1,84 @@
+==================================================================
+Harper CSC121-003: Assignment #7, 2014 Fall
+Student: Gary Butler
+
+This program is for you to exercise some of C++ string operations.
+==================================================================
+
+------ At the beginning -----
+str1: "Water is so soft, "
+length: 18 | capacity: 31 | max size: 4294967294
+empty: false
+
+str2: " But it is so strong."
+length: 21 | capacity: 31 | max size: 4294967294
+empty: false
+
+str3: ""
+length: 0 | capacity: 15 | max size: 4294967294
+empty: true
+
+==> After str1 = "In the world, " + str1,
+str1 is: "In the world, Water is so soft, "
+
+==> After str1.find ("Water") and str1[i] = 'w',
+str1: "In the world, water is so soft, "
+
+==> After i = str1.find("so") and str.erase(i, 2);,
+str1 is: "In the world, water is soft, "
+
+>>>>>>>> My job blow: >>>>>>>>>>
+
+==> After str3 = str1 + str2;...
+str3: "In the world, water is soft,  But it is so strong."
+
+With str3, after found "But", replaced it with "yet" and erased "so"...
+str3: "In the world, water is soft,  yet it is strong."
+
+==> At the beginning...
+str4: "I used to love C programmming language!"
+
+==> Add "But now " to str4...
+str4: "But now I used to love C programmming language!"
+
+==> Erase "used to "...
+str4: "But now I love C programmming language!"
+
+==> Replace "C" with "C++"...
+str4: "But now I love C++ programmming language!"
+
+==> Replace "programmming language" with "better"...
+str4: "But now I love C++ better!"
+
+>>>>> Below is the optional part of this assignment...
+Reverse a C++ string ...
+str5: "When in Rome, do as the Romans."
+length: 31 | capacity: 31 | max size: 4294967294
+empty: false
+
+Make a copy of str5...
+
+str6: "When in Rome, do as the Romans."
+length: 31 | capacity: 31 | max size: 4294967294
+empty: false
+
+==> After str5 is reversed into str6,
+str6: ".snamoR eht sa od ,emoR ni nehW"
+length: 31 | capacity: 31 | max size: 4294967294
+empty: false
+
+>>>>>>>> My job blow for the optinal: >>>>>>>>>>
+==> Reverse str5 using iterators of string...
+
+Make a copy of str5...
+
+str7: "When in Rome, do as the Romans."
+length: 31 | capacity: 31 | max size: 4294967294
+empty: false
+
+==> After str5 is reversed into str7,
+str7: ".snamoR eht sa od ,emoR ni nehW"
+length: 31 | capacity: 31 | max size: 4294967294
+empty: false
+
+Press any key to continue . . .
